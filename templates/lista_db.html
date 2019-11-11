@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+	<div>
+		<div class="container">
+			<div class="jumbotron">
+				<h3 class="text-center">Retomando informações do 
+				banco de dados</h3>
+					<h5><kbd>Consulta Ceps cadastrados.</h5>
+			</div>
+			<div>
+				<table class="table-hover">
+					<tr>
+						{% for col in col_db %}
+						<th>{{ col }}</th>
+						{% endfor %}
+					</tr>
+					{% for cep in db_cep %}
+					<tr>
+						<td>{{ cep.cep }}</td>
+						<td>{{ cep.cidade }}</td>
+					</tr>
+					{% endfor %}
+				</table>
+			</div>
+		</div>
+	</div>
+{% endblock %}

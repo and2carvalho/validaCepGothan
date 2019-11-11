@@ -1,0 +1,44 @@
+<html>
+    <head>						
+		<title>Valida CEP Gothan City</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	</head>    
+        <div class="row">
+            <div class="col-sm-8">
+                <h4 class="display-4">Valida CEP Gothan City</h4>
+                <hr>
+            </div>
+        </div>
+    <body>
+        <div class="container" style="min-height:100% width:80%">
+        	{% with messages = get_flashed_messages() %}
+        	  {% if messages %}
+        	    {% for message in messages %}
+        		  <div class="alert alert-warning" role="alert">
+			{{message}}
+        		  </div>
+        		{% endfor %}
+        	  {% endif %}
+        	{% endwith %}
+        </div>
+        <div class="container">
+        	<form method="POST" action='/'>
+        		<div class="form-group">
+        			<label for="username">Digite o nome do usuário:</label>
+        			<input type="text" class="form-control" name="username"><br>
+        		</div>
+        		<div class="form-group">
+        			<label for="passw">Insira sua senha:</label>
+        			<input type="password" class="form-control" name="passw"><br>
+        		</div>
+        		<div align="center">
+        			<button type="submit" class="btn btn-block btn-dark">
+        				<span class="spinner-border spinner-border-sm"></span>
+        					Entrar
+        			</button>
+        		</div>
+        	</form>
+        </div>
+    </body>
+    
+    
