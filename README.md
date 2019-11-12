@@ -14,12 +14,14 @@ O desenvolvimento web foi feito utilizando o *módulo flask*. Foi utilizado *Boo
 
 Definida uma classe CEP com atributos **cep**,**cidade**, **step1**, **step2**. A classe possui apenas 1 método para validação do CEP de acordo com a proposta. O método altera os valores booleanos dos atributos **step1** e **step2** para permitir que o registro seja adicionado ao banco de dados.
 
-Foi utilizado *módulo flask-sqlalchemy* para comunicação com o banco de dados.
+Foi utilizado o *módulo flask-sqlalchemy* para comunicação com o banco de dados e o *módulo flask-login* para efetuar a autenticação do usuário.
 
 #### Passos para executar o projeto
 
 1. pip install pipenv
-2. pipenv shell (no diretório onde encontra-se o Pipfile)
-3. flask app.py
-4. Acessar no navegador localhost:5000
-5. Have Fun!
+2. pipenv install (no diretório onde encontra-se o Pipfile)
+3. pipenv shell
+4. flask app.py
+5. Acessar no navegador localhost:5000
+6. Inserir username = admin e password = masterkey
+7. Have Fun!
